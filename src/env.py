@@ -1,0 +1,2 @@
+MEDIA_FOLDER = '/media/'
+
