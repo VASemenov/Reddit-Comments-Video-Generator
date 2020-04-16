@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+import shutil
 
 # Paths config
 ROOT_PATH = str(Path(__file__).parent.parent)
@@ -26,3 +27,9 @@ def init_paths():
     for path in paths:
         if not os.path.exists(path):
             os.mkdir(path)
+
+
+# Deletes all media files
+def clear():
+    shutil.rmtree(MEDIA_PATH, ignore_errors=True)
+    init_paths()
