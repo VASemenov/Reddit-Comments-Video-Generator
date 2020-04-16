@@ -3,12 +3,13 @@ from google.cloud.texttospeech_v1.gapic.enums import AudioEncoding
 from google.cloud.texttospeech import TextToSpeechClient
 import os
 import env
+import credentials
 
 
 class Synthesizer:
 
     def __init__(self, text, path):
-        os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/Users/vladimir/Documents/LegionReddit/Legion-be765195b4f3.json'
+        os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credentials.PATH
         self.text = text
         self.path = env.AUDIO_PATH + path
         # Instantiates a client
